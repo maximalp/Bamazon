@@ -120,11 +120,15 @@ function orderStart() {
     function(error) {
       if (error) throw err;
 
-      var totalPrice = quantity * price;
+      var totalPrice = (quantity * price).toFixed(2);
 
       console.log("Order Placed Succesfully!");
       console.log("The total for your order is: $" + totalPrice);
-    });
 
+      //Math.round(parseFloat(totalPrice), 2);
+    });
+//console.log("The total for your order is: $" + totalPrice);
+
+//  console.log("The total for your order is: $" + Math.round(parseFloat(totalPrice), 2.2))
 
   };
